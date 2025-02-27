@@ -2,9 +2,9 @@
 
 {% load static %}
 
-{% block title %}Recipe{% endblock %}
+{% block title %}{% endblock %}
 {% block content %}
-    {{name}}
+    {{object.name}}
     <ul>
         {% for ingredient in object.ingredients.all %}
         <li>
