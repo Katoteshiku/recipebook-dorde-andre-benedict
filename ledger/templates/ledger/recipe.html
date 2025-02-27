@@ -6,9 +6,9 @@
 {% block content %}
     {{name}}
     <ul>
-        {% for ingredient in ingredients %}
+        {% for ingredient in object.ingredients.all %}
         <li>
-            {{ingredient.quantity}} {{ingredient.name}}
+            {{ingredient.quantity}} {{ingredient.ingredient.name}}
         </li>
         {% endfor %}
     </ul>
