@@ -3,8 +3,8 @@
 {% load static %}
 
 {% block title %}{% endblock %}
+{% block page %}{{object.name}}{% endblock %}
 {% block content %}
-    <h2>{{object.name}}<h2></h2>
     <p>by {{ object.author.name }}</p>
     <ul>
         {% for ingredient in object.ingredients.all %}
