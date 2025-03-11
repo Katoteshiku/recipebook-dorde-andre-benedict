@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from django.core.validators import MinLengthValidator
 
+
 class Ingredient(models.Model):
     name = models.CharField(max_length=100)
 
