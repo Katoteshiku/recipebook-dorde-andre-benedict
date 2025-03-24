@@ -10,10 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
-
 from pathlib import Path
-
 from dotenv import load_dotenv
+from django.conf import settings
+from django.conf.urls.static import static
 
 load_dotenv()
 
@@ -124,8 +124,12 @@ USE_TZ = True
 STATIC_URL = 'static/'
 LOGIN_REDIRECT_URL = '/recipes/list'
 LOGOUT_REDIRECT_URL = '/accounts/login'
+MEDIA_ROOT = BASE_DIR/'media'
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+urlpatterns = static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
