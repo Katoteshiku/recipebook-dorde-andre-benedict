@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
-from django.conf import settings
-from django.conf.urls.static import static
 
 load_dotenv()
 
@@ -131,5 +129,3 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-urlpatterns = static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

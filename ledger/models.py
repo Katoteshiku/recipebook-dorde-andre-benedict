@@ -70,5 +70,5 @@ class RecipeImage(models.Model):
         Recipe,
         on_delete=models.SET_NULL,
         null=True,
-        related_name="recipe"
+        related_name="image"
     )

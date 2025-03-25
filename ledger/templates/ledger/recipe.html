@@ -6,6 +6,10 @@
 {% block page %}{{object.name}}{% endblock %}
 {% block content %}
     <p>by {{ object.author.name }}</p>
+    {% for image in object.image.all %}
+        <img src="{{ image.image.url }}" alt="{{ image.description }}" style="height: 100px;">
+    {% endfor %}
+    <img src="{{ object.image }}" alt="{{ object.image.description }}">
     <ul>
         {% for ingredient in object.ingredients.all %}
         <li>
